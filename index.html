@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en-us">
+    <head>
+        <title>Covid-19</title>
+        <meta charset="UTF-8">
+<!-- CSS only -->
+<link rel="stylesheet" href="style.css" />
+
+        <style>
+            table, th, td {
+                transition: 2s;
+                position:relative;
+                margin:auto;
+                overflow:hidden;
+                border-collapse:collapse;
+                text-align: center;
+                /* border: 1px solid grey; */
+            }
+            
+            th {
+                
+                height: 50px;
+                font-size: 15px;
+                color: white;
+                background-color: #019577;
+            }
+            th:hover{
+                background-color: #01c09a;
+                transition: 0.8s;
+            }
+            td {
+                height: 50px;
+            }
+            #co-table {
+                margin: auto;
+                width: 90%;
+                height: 100%;
+                padding: 20px;
+            }
+            .even :hover{
+                background-color: rgb(245, 245, 245);
+                transition: 0.5s;
+            }
+            .odd :hover{
+                background-color: rgb(212, 211, 211);
+                transition: 0.5s;
+            }
+
+        </style>
+
+        
+
+    </head>
+
+    <body>
+        <br>
+        
+        <div class="table-responsive">
+            <table id="co-table">
+                <tr data-aos="slide-down">
+                    <th>State</th>
+                    <th>Confirmed</th>
+                    <th>Active</th>
+                    <th>Recovered</th>
+                    <th>Deaths</th>
+                    <th>Last Time Updated</th>
+                </tr>
+            </table>
+
+        </div>
+        <br>
+        <script src="sketch.js" async></script>
+    </body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+         <script>
+           AOS.init({
+            offset: 100,
+            duration: 800,
+           });
+         </script>
+</html>
