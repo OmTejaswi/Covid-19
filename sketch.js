@@ -2,7 +2,7 @@
 var stateCode = []
 async function api(){
 try{
-    var timeData = await fetch("https://worldtimeapi.org/api/ip");
+    var timeData = await fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata");
 } catch(arr) {
     window.location.reload();
 }
@@ -32,15 +32,15 @@ try{
             console.log(stateCode);
             if(increase[take][stateCode[i-1]]['delta'] !== undefined) {
                 if(i % 2-1 === 0) {
-                    var rows = "<tr style='background-color: #fff;' class='even' data-aos='slide-left'><td class='fix'>"+decode['statewise'][i]['state']+"</td><td><div style='color: tomato; font-size: 12px; margin-left:10px'><b>🡡"+increase[take][stateCode[i-1]]['delta']['confirmed']+"</b></div><br>"+decode['statewise'][i]['confirmed']+"</td><td>"+decode['statewise'][i]['active']+"</td><td>"+decode['statewise'][i]['recovered']+"</td><td>"+decode['statewise'][i]['deaths']+"</td><td>"+decode['statewise'][i]['lastupdatedtime']+"</td></tr>";
+                    var rows = "<tr style='background-color: #fff;' class='even' data-aos='slide-left'><td class='fix'>"+decode['statewise'][i]['state']+"</td><td><div style='color: tomato; font-size: 12px; margin-left:15px'><b>🡡"+increase[take][stateCode[i-1]]['delta']['confirmed']+"</b></div>"+decode['statewise'][i]['confirmed']+"</td><td><br>"+decode['statewise'][i]['active']+"</td><td><div style='color: #31AA4C; font-size: 12px; margin-left:15px'><b>🡡"+increase[take][stateCode[i-1]]['delta']['recovered']+"</b></div>"+decode['statewise'][i]['recovered']+"</td><td><div style='color: black; font-size: 12px; margin-left:15px'><b>🡡"+increase[take][stateCode[i-1]]['delta']['deceased']+"</b></div>"+decode['statewise'][i]['deaths']+"</td><td><br>"+decode['statewise'][i]['lastupdatedtime']+"</td></tr>";
                 } else {
-                    var rows = "<tr style='background-color: #e7e7e7;' class='odd' data-aos='slide-right'><td class='fix'>"+decode['statewise'][i]['state']+"</td><td><div style='color: tomato; font-size: 12px; margin-left:10px'><b>🡡"+increase[take][stateCode[i-1]]['delta']['confirmed']+"</b></div><br>"+decode['statewise'][i]['confirmed']+"</td><td>"+decode['statewise'][i]['active']+"</td><td>"+decode['statewise'][i]['recovered']+"</td><td>"+decode['statewise'][i]['deaths']+"</td><td>"+decode['statewise'][i]['lastupdatedtime']+"</td></tr>";
+                    var rows = "<tr style='background-color: #e7e7e7;' class='odd' data-aos='slide-right'><td class='fix'>"+decode['statewise'][i]['state']+"</td><td><div style='color: tomato; font-size: 12px; margin-left:15px'><b>🡡"+increase[take][stateCode[i-1]]['delta']['confirmed']+"</b></div>"+decode['statewise'][i]['confirmed']+"</td><td><br>"+decode['statewise'][i]['active']+"</td><td><div style='color: #31AA4C; font-size: 12px; margin-left:15px'><b>🡡"+increase[take][stateCode[i-1]]['delta']['recovered']+"</b></div>"+decode['statewise'][i]['recovered']+"</td><td><div style='color: black; font-size: 12px; margin-left:15px'><b>🡡"+increase[take][stateCode[i-1]]['delta']['deceased']+"</b></div>"+decode['statewise'][i]['deaths']+"</td><td><br>"+decode['statewise'][i]['lastupdatedtime']+"</td></tr>";
                 }
             } else {
                 if(i % 2-1 === 0) {
-                    var rows = "<tr style='background-color: #fff;' class='even' data-aos='slide-left'><td class='fix'>"+decode['statewise'][i]['state']+"</td><td><div style='color: tomato; font-size: 12px; margin-left:10px'>"+''+"</div><br>"+decode['statewise'][i]['confirmed']+"</td><td>"+decode['statewise'][i]['active']+"</td><td>"+decode['statewise'][i]['recovered']+"</td><td>"+decode['statewise'][i]['deaths']+"</td><td>"+decode['statewise'][i]['lastupdatedtime']+"</td></tr>";
+                    var rows = "<tr style='background-color: #fff;' class='even' data-aos='slide-left'><td class='fix'>"+decode['statewise'][i]['state']+"</td><td><div style='color: tomato; font-size: 12px; margin-left:10px'>"+''+"</div>"+decode['statewise'][i]['confirmed']+"</td><td>"+decode['statewise'][i]['active']+"</td><td>"+decode['statewise'][i]['recovered']+"</td><td>"+decode['statewise'][i]['deaths']+"</td><td>"+decode['statewise'][i]['lastupdatedtime']+"</td></tr>";
                 } else {
-                    var rows = "<tr style='background-color: #e7e7e7;' class='odd' data-aos='slide-right'><td class='fix'>"+decode['statewise'][i]['state']+"</td><td><div style='color: tomato; font-size: 12px; margin-left:10px'>"+''+"</div><br>"+decode['statewise'][i]['confirmed']+"</td><td>"+decode['statewise'][i]['active']+"</td><td>"+decode['statewise'][i]['recovered']+"</td><td>"+decode['statewise'][i]['deaths']+"</td><td>"+decode['statewise'][i]['lastupdatedtime']+"</td></tr>";
+                    var rows = "<tr style='background-color: #e7e7e7;' class='odd' data-aos='slide-right'><td class='fix'>"+decode['statewise'][i]['state']+"</td><td><div style='color: tomato; font-size: 12px; margin-left:10px'>"+''+"</div>"+decode['statewise'][i]['confirmed']+"</td><td>"+decode['statewise'][i]['active']+"</td><td>"+decode['statewise'][i]['recovered']+"</td><td>"+decode['statewise'][i]['deaths']+"</td><td>"+decode['statewise'][i]['lastupdatedtime']+"</td></tr>";
                 }
             }
             
